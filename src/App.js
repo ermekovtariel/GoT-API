@@ -1,7 +1,12 @@
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { useRoutes } from './routes';
+
 import './App.css';
 
 function App() {
-  return <div className='App'>awd</div>;
+  const routes = useRoutes();
+  return <Router>{routes}</Router>;
 }
 
 export default App;

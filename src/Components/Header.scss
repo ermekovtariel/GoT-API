@@ -1,0 +1,24 @@
+@import '../style/colors.scss';
+@import '../style/size.scss';
+
+.header_block {
+  display: flex;
+  grid-gap: 50% 50%;
+  justify-content: space-between;
+  list-style: none;
+  background: $bg;
+  padding: 16px 28px;
+  border-radius: $borderR;
+  li {
+    align-self: center;
+  }
+  .pagination {
+    display: flex;
+    grid-gap: 1rem;
+    button {
+      border: none;
+      height: 36px;
+      border-radius: $borderR;
+    }
+  }
+}

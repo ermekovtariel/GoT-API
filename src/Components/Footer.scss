@@ -1,0 +1,27 @@
+@import '../style/colors.scss';
+@import '../style/size.scss';
+
+.footer_block {
+  display: flex;
+  grid-gap: 50% 16% 16%;
+  justify-content: space-between;
+  list-style: none;
+  background: $bg;
+  padding: 16px 28px;
+  border-radius: $borderR;
+  gap: 1rem;
+  input {
+    width: 100%;
+    border: none;
+    padding: 12px;
+    border-radius: $borderR;
+  }
+  button {
+    border: none;
+    border-radius: $borderR;
+  }
+  .pagination {
+    display: flex;
+    grid-gap: 1rem;
+  }
+}

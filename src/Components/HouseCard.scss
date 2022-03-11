@@ -1,0 +1,26 @@
+@import '../style/colors.scss';
+@import '../style/size.scss';
+
+.card_block {
+  background: $silver;
+  padding: 1px 15px;
+  margin: 21px 0;
+  width: 240px;
+
+  border-radius: $borderR;
+  a {
+    text-decoration: none;
+    color: $bg;
+    div {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 12px;
+      margin-bottom: 21px;
+    }
+  }
+}
+@media screen and (max-width: 638px) {
+  .card_block {
+    width: 90%;
+  }
+}
