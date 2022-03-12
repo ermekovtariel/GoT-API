@@ -13,10 +13,7 @@ function HouseCard(props) {
       return a.slice(a.indexOf(char) + 2);
     }
   }
-  function handleClick(str, char) {
-    let a = str;
-
-    console.log(a.slice(a.indexOf(char) + 2));
+  function handleClick() {
     localStorage.setItem('url', JSON.stringify(url));
   }
 

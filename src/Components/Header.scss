@@ -3,12 +3,14 @@
 
 .header_block {
   display: flex;
-  grid-gap: 50% 50%;
   justify-content: space-between;
   list-style: none;
   background: $bg;
   padding: 16px 28px;
   border-radius: $borderR;
+  h2 {
+    color: #fff;
+  }
   li {
     align-self: center;
     font-size: 24px;

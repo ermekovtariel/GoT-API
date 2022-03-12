@@ -15,14 +15,20 @@ function House() {
   const houseStore = useSelector((state) => state.house.house);
 
   const loading = LOADING.toLowerCase();
-  const { name, titles, coatOfArms, seats, diedOut, overlord, cadetBranches } =
-    houseStore;
+  const {
+    name,
+    titles,
+    coatOfArms,
+    seats,
+    diedOut,
+    overlord,
+    cadetBranches,
+  } = houseStore;
 
   useEffect(() => {
     dispatch(getThisHouse({ url }));
+    console.clear();
   }, []);
-
-  console.log(houseStore);
 
   return (
     <Layout>

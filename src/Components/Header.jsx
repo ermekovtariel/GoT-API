@@ -43,6 +43,7 @@ function Header(props) {
           )}
         />
       </li>
+      <h2>WORK</h2>
       <li className='pagination'>
         <Route
           exact

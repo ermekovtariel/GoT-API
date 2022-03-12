@@ -17,14 +17,12 @@ function Footer(props) {
   const [pageValue, setpageValue] = useState(page);
   const [getData, setGetData] = useState(true);
 
-  // useEffect(() => {
-  // }, []);
-
   useEffect(() => {
     setpageValue(page);
     getData && dispatch(getHouses({ page }));
-    getData && dispatch(getPeople({ page }));
+    // getData && dispatch(getPeople({ page }));
     getData && setGetData(false);
+    console.clear();
   }, [page]);
 
   function back() {

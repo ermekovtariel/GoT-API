@@ -39,8 +39,6 @@ function Person() {
     return el?.name?.toLowerCase(filter)?.includes(filter);
   });
 
-  console.log({ filter, mockData });
-
   return (
     <Layout filter={filter} setFilter={setFilter}>
       <PersonList mockData={mockData} />
