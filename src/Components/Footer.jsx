@@ -20,7 +20,7 @@ function Footer(props) {
   useEffect(() => {
     setpageValue(page);
     getData && dispatch(getHouses({ page }));
-    // getData && dispatch(getPeople({ page }));
+    getData && dispatch(getPeople({ page }));
     getData && setGetData(false);
     console.clear();
   }, [page]);
