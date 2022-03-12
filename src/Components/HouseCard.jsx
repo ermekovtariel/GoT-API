@@ -5,17 +5,23 @@ import { Link } from 'react-router-dom';
 import './HouseCard.scss';
 
 function HouseCard(props) {
-  const { id, title, region, armsCoat } = props;
+  const { url, region, coatOfArms, words } = props;
+  // console.log(props);
+
+  function getSubstr(str, char, pos) {
+    let a = str;
+    if (pos === 'after') return a.slice(a.indexOf(char) + 1);
+  }
 
   return (
     <div className='card_block'>
-      <Link to={`/houses/:${id}`}>
-        <h3>{title === undefined ? 'title' : title}</h3>
+      <Link to={`${getSubstr(url, 's/', 'after')}`}>
+        <h3>{region === undefined ? 'title' : region}</h3>
         <div>
-          <span>Region: </span>
-          <span> {region === undefined ? 'No informations' : region}</span>
           <span>Coat of arms:</span>
-          <span> {armsCoat === undefined ? 'No data' : armsCoat}</span>
+          <span> {!coatOfArms ? 'No data' : coatOfArms}</span>
+          <span>Words:</span>
+          <span> {!words ? 'No words' : words}</span>
         </div>
       </Link>
     </div>

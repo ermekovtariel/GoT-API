@@ -20,6 +20,9 @@
     border: none;
     border-radius: $borderR;
   }
+  .page_number {
+    align-self: center;
+  }
   .pagination {
     display: flex;
     grid-gap: 1rem;

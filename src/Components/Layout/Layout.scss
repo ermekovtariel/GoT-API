@@ -1,9 +1,6 @@
 .layout_box {
-  // height: 100ch;
   display: grid;
   grid-template-rows: min-content 72ch min-content;
-  // grid-template-rows: min-content 38% min-content;
-  //!
   .layout_content {
     overflow-y: scroll;
   }

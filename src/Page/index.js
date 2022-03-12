@@ -3,14 +3,14 @@ import Home from './Home';
 
 // HOUSE
 import House from './House';
-import HousesList from './HousesList';
 import Person from './Person';
+import HousesList from './HousesList';
 
 export {
   // HOME
   Home,
   // HOUSE
   House,
-  HousesList,
   Person,
+  HousesList,
 };

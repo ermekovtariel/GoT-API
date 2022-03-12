@@ -1,7 +1,13 @@
 .card_list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   grid-gap: 20px;
+  margin-bottom: 16px;
+  .loading {
+    text-align: center;
+    width: 100%;
+  }
 }
 @media screen and (max-width: 638px) {
   .card_list {

@@ -1,14 +1,16 @@
 import React from 'react';
-import Layout from '../Components/Layout';
-import HousesList from './HousesList';
+import { Layout } from '../Components';
+import { HousesList } from './';
+import { useSelector } from 'react-redux';
 
 function Home() {
+  const housesStore = useSelector((state) => state.houses.houses);
+  const [filter, setFilter] = React.useState('second');
+  console.log(filter);
   return (
-    <div>
-      <Layout>
-        <HousesList />
-      </Layout>
-    </div>
+    <Layout filter={filter} setFilter={setFilter}>
+      <HousesList housesStore={housesStore} />
+    </Layout>
   );
 }
 
