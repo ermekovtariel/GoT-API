@@ -1,5 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
+import PT from 'prop-types';
+
 import { Footer, Header } from '../';
 
 import './Layout.scss';
@@ -23,5 +25,11 @@ function Layout(props) {
     </div>
   );
 }
+
+Layout.propTypes = {
+  children: PT.any,
+  filter: PT.string,
+  setFilter: PT.func,
+};
 
 export default Layout;

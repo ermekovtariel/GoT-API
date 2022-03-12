@@ -21,7 +21,7 @@ function HouseCard(props) {
   }
 
   return (
-    <div className='card_block'>
+    <div key={url} className='card_block'>
       <Link
         onClick={() => handleClick(url, 's/', 'after')}
         to={`/house/:${getSubstr(url, 's/', 'after')}`}

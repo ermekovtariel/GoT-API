@@ -1,11 +1,11 @@
 import React from 'react';
 import PT from 'prop-types';
+import { LoadingOutlined } from '@ant-design/icons';
+import { useSelector } from 'react-redux';
 
 import { HouseCard } from '../Components';
 import { LOADING, SUCCESS } from '../config/statuses';
-import { useSelector } from 'react-redux';
 import './HousesList.scss';
-import { LoadingOutlined } from '@ant-design/icons';
 
 function HousesList(props) {
   const { housesStore } = props;
@@ -16,7 +16,7 @@ function HousesList(props) {
   return (
     <div className='card_list'>
       {status === SUCCESS ? (
-        housesStore.map((item, idx) => <HouseCard {...item} key={idx} />)
+        housesStore?.map((item) => <HouseCard {...item} key={item?.url} />)
       ) : (
         <span className='loading'>
           <LoadingOutlined />

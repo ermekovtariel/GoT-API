@@ -1,43 +1,38 @@
 import axios from 'axios';
 
 import {
-  HOUSE,
-  LOADING_HOUSE,
-  SUCCESS_HOUSE,
-  ERROR_HOUSE,
-  PAGE,
+  PERSON,
+  PERSON_LOADING,
+  PERSON_ERRORR,
+  PERSON_PAGE,
 } from '../actionTypes';
 import { urls, statuses } from '../../config';
 
-export const getHouses =
+export const getPeople =
   ({ page }) =>
   async (dispatch) => {
     dispatch({
-      type: LOADING_HOUSE,
+      type: PERSON_LOADING,
       payload: statuses.LOADING,
     });
     try {
       return await axios
-        .get(`${urls?.HOUSE}=${page ? page : 1}&pageSize=25`)
+        .get(`${urls?.PEOPLE}=${page ? page : 1}&pageSize=25`)
         .then((res) => {
-          localStorage.setItem('page', JSON.stringify(page ? page : 1));
-
+          localStorage.setItem('people_page', JSON.stringify(page ? page : 1));
           dispatch({
-            type: HOUSE,
+            type: PERSON,
             payload: res.data,
           });
           dispatch({
-            type: PAGE,
+            type: PERSON_PAGE,
             payload: page,
-          });
-          dispatch({
-            type: SUCCESS_HOUSE,
           });
           return res.data;
         });
     } catch (e) {
       dispatch({
-        type: ERROR_HOUSE,
+        type: PERSON_ERRORR,
       });
     }
   };

@@ -1,13 +1,14 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {
   HomeOutlined,
   LeftCircleOutlined,
   UserOutlined,
 } from '@ant-design/icons';
+import PT from 'prop-types';
 
 import './Header.scss';
-import { Route } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 
 function Header(props) {
   const { name } = props;
@@ -17,8 +18,8 @@ function Header(props) {
         <Route
           exact
           path={'/house/:id'}
-          render={() => (
-            <Link className='header_back_button' to='/'>
+          render={(e) => (
+            <Link key={e} className='header_back_button' to='/'>
               <LeftCircleOutlined />
             </Link>
           )}
@@ -26,15 +27,19 @@ function Header(props) {
         <Route
           exact
           path={'/'}
-          render={() => (
-            <Link to='/'>{name === undefined ? 'Logo' : name}</Link>
+          render={(e) => (
+            <Link key={e} to='/'>
+              {name === undefined ? 'Logo' : name}
+            </Link>
           )}
         />
         <Route
           exact
           path={'/person'}
-          render={() => (
-            <Link to='/'>{name === undefined ? 'Logo' : name}</Link>
+          render={(e) => (
+            <Link key={e} to='/'>
+              {name === undefined ? 'Logo' : name}
+            </Link>
           )}
         />
       </li>
@@ -42,9 +47,9 @@ function Header(props) {
         <Route
           exact
           path={'/'}
-          render={() => (
-            <div className='header_route_button'>
-              <span>svitche to: </span>
+          render={(e) => (
+            <div key={e} className='header_route_button'>
+              <span>Switch to: </span>
               <Link to='/person'>
                 <button>
                   <UserOutlined />
@@ -58,7 +63,7 @@ function Header(props) {
           path={'/person'}
           render={() => (
             <div className='header_route_button'>
-              <span>svitche to: </span>
+              <span>Switch to: </span>
               <Link to='/'>
                 <button>
                   <HomeOutlined />
@@ -71,5 +76,10 @@ function Header(props) {
     </ul>
   );
 }
+// name
+
+Header.propTypes = {
+  name: PT.string,
+};
 
 export default Header;

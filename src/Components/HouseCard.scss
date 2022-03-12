@@ -16,6 +16,16 @@
       margin-bottom: 21px;
     }
   }
+  div {
+    text-decoration: none;
+    color: $bg;
+    div {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 12px;
+      margin-bottom: 21px;
+    }
+  }
 }
 @media screen and (max-width: 638px) {
   .card_block {
