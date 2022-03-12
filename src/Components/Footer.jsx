@@ -36,7 +36,6 @@ function Footer(props) {
 
   return (
     <div className='footer_block'>
-      {/* filterData={filter} setFilter={setFilter} */}
       <input
         placeholder='Search'
         value={filter}

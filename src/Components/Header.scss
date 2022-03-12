@@ -23,4 +23,20 @@
       border-radius: $borderR;
     }
   }
+  .header_route_button {
+    display: flex;
+    align-items: center;
+    grid-gap: 1rem;
+  }
+  .header_back_button {
+    color: #fff;
+    font-size: 31.5px;
+    span {
+      padding: 8px 0;
+    }
+  }
+}
+a {
+  text-decoration: none;
+  color: #fff;
 }

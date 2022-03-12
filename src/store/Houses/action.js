@@ -12,7 +12,6 @@ import { urls, statuses } from '../../config';
 export const getHouses =
   ({ page }) =>
   async (dispatch) => {
-    console.log('page====>', page);
     dispatch({
       type: LOADING_HOUSE,
       payload: statuses.LOADING,
